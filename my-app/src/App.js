@@ -8,58 +8,58 @@ import Typewriter from "typewriter-effect";
 export default function App() {
   return (
     <div className="App">
-      <div
-        style={{
-          display: "flex",
-          width: "100%",
-          height: "70px",
-          color: "white",
-          letterSpacing: "5",
-          justifyContent: "flex-end",
-        }}
-      >
-        <div style={{ margin: "20px 50px 0 20px" }}>About</div>
-        <div style={{ margin: "20px 50px 0 20px" }}>
-          <a
-            style={{ textDecoration: "none", color: "white" }}
-            href="https://medium.com/@taniaa2707"
-            target="_blank"
-          >
-            Medium
-          </a>
+        <div
+          style={{
+            display: "flex",
+            width: "100%",
+            height: "70px",
+            color: "white",
+            letterSpacing: "5",
+            justifyContent: "flex-end",
+          }}
+        >
+          <div style={{ margin: "20px 50px 0 20px" }}>About</div>
+          <div style={{ margin: "20px 50px 0 20px" }}>
+            <a
+              style={{ textDecoration: "none", color: "white" }}
+              href="https://medium.com/@taniaa2707"
+              target="_blank"
+            >
+              Medium
+            </a>
+          </div>
+          <div style={{ margin: "20px 50px 0 20px" }}>
+            <a
+              style={{ textDecoration: "none", color: "white" }}
+              href="https://www.linkedin.com/in/tania-tania/"
+              target="_blank"
+            >
+              LinkedIn
+            </a>
+          </div>
+          <div style={{ marginRight: "50px", marginTop: "20px" }}>
+            <a hover={{ color: "#e66c2c" }}> </a>
+            <a
+              style={{ textDecoration: "none", color: "white" }}
+              href="https://github.com/tantaniaa/"
+              target="_blank"
+            >
+              Github
+            </a>
+          </div>
+          <div style={{ marginRight: "50px", marginTop: "15px" }}>
+            <Button
+              variant="outlined"
+              color="inherit"
+              style={{ textDecoration: "none", color: "white" }}
+              href="https://drive.google.com/file/d/1F9GTx_5ID-I-0KR9nUptg9I8XmfFwnr1/view?usp=sharing"
+              target="_blank"
+            >
+              Resume
+            </Button>
+          </div>
         </div>
-        <div style={{ margin: "20px 50px 0 20px" }}>
-          <a
-            style={{ textDecoration: "none", color: "white" }}
-            href="https://www.linkedin.com/in/tania-tania/"
-            target="_blank"
-          >
-            LinkedIn
-          </a>
-        </div>
-        <div style={{ marginRight: "50px", marginTop: "20px" }}>
-          <a hover={{ color: "#e66c2c" }}> </a>
-          <a
-            style={{ textDecoration: "none", color: "white" }}
-            href="https://github.com/tantaniaa/"
-            target="_blank"
-          >
-            Github
-          </a>
-        </div>
-        <div style={{ marginRight: "50px", marginTop: "15px" }}>
-          <Button
-            variant="outlined"
-            color="inherit"
-            style={{ textDecoration: "none", color: "white" }}
-            href="https://drive.google.com/file/d/1F9GTx_5ID-I-0KR9nUptg9I8XmfFwnr1/view?usp=sharing"
-            target="_blank"
-          >
-            Resume
-          </Button>
-        </div>
-      </div>
-      <Container maxWidth="lg">
+<Container>
         <Grid container>
           <Grid item xs={12}>
             <Box mt="200px" color="white" width="900px">
@@ -126,9 +126,9 @@ export default function App() {
             </Box>
           </Grid>
         </Grid>
-        <Grid container>
-          <Grid item xs={6}>
-            <Box mt="300px" color="white" width="500px">
+        <Grid container maxWidth="lg" mt="300px">
+          <Grid item xs={12} md={6} lg={6}>
+            <Box mt="0px" color="white" >
               <Typography
                 className="About Me"
                 fontFamily="'Manrope', sans-serif"
@@ -174,22 +174,20 @@ export default function App() {
               </Typography>
             </Box>
           </Grid>
-          <Grid item xs={6}>
+          <Grid item xs={12} md={6} lg={6}>
             <img
               src={"profilepicture.png"}
               alt="Profile Picture"
               style={{
-                marginTop: "390px",
-                height: "40%",
-                width: "50%",
+                marginTop: "90px",
+                height: "70%",
+                width: "60%",
                 objectFit: "cover",
               }}
             />
           </Grid>
         </Grid>
-        <Box height="300px">
-
-        </Box>
+        <Box height="300px"></Box>
       </Container>
     </div>
   );
