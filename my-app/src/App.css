@@ -1,6 +1,51 @@
 .App {
-  font-family: 'Manrope', sans-serif;
-  background-color: #2F686F;
+  font-family: "Manrope", sans-serif;
+  background-color: #2f686f;
   height: 100%;
   width: 100%;
+}
+
+.navbar-about {
+  text-decoration: none;
+  color: white;
+}
+
+.navbar-about:hover {
+  color: #17252a;
+}
+
+.navbar-medium {
+  text-decoration: none;
+  color: white;
+}
+
+.navbar-medium:hover {
+  color: #17252a;
+}
+
+.navbar-linkedin {
+  text-decoration: none;
+  color: white;
+}
+
+.navbar-linkedin:hover {
+  color: #17252a;
+}
+
+.navbar-github {
+  text-decoration: none;
+  color: white;
+}
+
+.navbar-github:hover {
+  color: #17252a;
+}
+
+.navbar-resume {
+  text-decoration: none;
+  color: white;
+}
+
+.navbar-resume:hover {
+  color: #17252a;
 }
