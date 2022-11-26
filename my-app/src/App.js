@@ -2,13 +2,18 @@ import React from "react";
 import { Container, Grid, Box, Typography, Button } from "@mui/material";
 import "./App.css";
 import Typewriter from "typewriter-effect";
+import { isMobile } from "react-device-detect";
 
 // import { color } from "@mui/system";
 
 export default function App() {
   return (
     <div className="App">
-      <div
+      <div>
+      {isMobile ? (
+        <Grid
+        container
+        xs={12}
         style={{
           display: "flex",
           width: "100%",
@@ -18,15 +23,111 @@ export default function App() {
           justifyContent: "flex-end",
         }}
       >
-        <div  style={{ margin: "20px 50px 0 20px" }}>
+        <div style={{fontSize: "15px", margin: "20px 10px 0 10px" }}>
           {" "}
-          <a className="navbar-about"  href="#AboutMe">
+          <a className="navbar-about" href="#AboutMe">
+          <img
+              src={"abouticon.jpg"}
+              alt="About"
+              style={{
+                height: "20px",
+                width: "20px",
+                objectFit: "cover",
+              }}
+            />
+          </a>
+        </div>
+        <div style={{fontSize: "15px", margin: "20px 10px 0 10px" }}>
+          <a
+            className="navbar-medium"
+            href="https://medium.com/@taniaa2707"
+            target="_blank"
+          >
+            <img
+              src={"mediumicon.png"}
+              alt="Medium"
+              style={{
+                height: "20px",
+                width: "20px",
+                objectFit: "cover",
+              }}
+            />
+          </a>
+        </div>
+        <div style={{fontSize: "15px", margin: "20px 10px 0 10px" }}>
+          <a
+            className="navbar-linkedin"
+            href="https://www.linkedin.com/in/tania-tania/"
+            target="_blank"
+          >
+            <img
+              src={"linkedinicon.png"}
+              alt="Linkedin"
+              style={{
+                height: "20px",
+                width: "20px",
+                objectFit: "cover",
+              }}
+            />
+          </a>
+        </div>
+        <div style={{fontSize: "15px", margin: "20px 10px 0 10px" }}>
+          <a
+            className="navbar-github"
+            href="https://github.com/tantaniaa/"
+            target="_blank"
+          >
+            <img
+              src={"githubicon.png"}
+              alt="Github"
+              style={{
+                height: "20px",
+                width: "20px",
+                objectFit: "cover",
+              }}
+            />
+          </a>
+        </div>
+        <div style={{fontSize: "15px", margin: "20px 10px 0 10px"}}>
+        <a
+            className="navbar-github"
+            href="https://drive.google.com/file/d/1F9GTx_5ID-I-0KR9nUptg9I8XmfFwnr1/view?usp=sharing"
+            target="_blank"
+          >
+            <img
+              src={"resumeicon.png"}
+              alt="Linkedin"
+              style={{
+                height: "20px",
+                width: "20px",
+                objectFit: "cover",
+              }}
+            />
+          </a>
+        </div>
+      </Grid>
+         ) : (
+      <Grid
+        container
+        xs={12}
+        style={{
+          display: "flex",
+          width: "100%",
+          height: "70px",
+          color: "white",
+          letterSpacing: "5",
+          justifyContent: "flex-end",
+        }}
+      >
+        <div style={{margin: "20px 50px 0 20px" }}>
+          {" "}
+          <a className="navbar-about" href="#AboutMe">
             About
           </a>
         </div>
         <div style={{ margin: "20px 50px 0 20px" }}>
-          <a className="navbar-medium"
-           
+          <a
+            className="navbar-medium"
             href="https://medium.com/@taniaa2707"
             target="_blank"
           >
@@ -34,7 +135,8 @@ export default function App() {
           </a>
         </div>
         <div style={{ margin: "20px 50px 0 20px" }}>
-          <a className="navbar-linkedin"
+          <a
+            className="navbar-linkedin"
             href="https://www.linkedin.com/in/tania-tania/"
             target="_blank"
           >
@@ -42,7 +144,8 @@ export default function App() {
           </a>
         </div>
         <div style={{ marginRight: "50px", marginTop: "20px" }}>
-          <a className="navbar-github"
+          <a
+            className="navbar-github"
             href="https://github.com/tantaniaa/"
             target="_blank"
           >
@@ -59,11 +162,77 @@ export default function App() {
             Resume
           </Button>
         </div>
+      </Grid>
+      )}
       </div>
 
       <Container>
         <Grid container>
           <Grid item xs={12}>
+          {isMobile ? (
+             <Box mt="80px" color="white">
+             <Typography
+               fontFamily="'Sono', sans-serif"
+               fontWeight="light"
+               fontSize="20px"
+             >
+               Hi, my name is
+             </Typography>
+             <Typography
+               fontFamily="'Manrope', sans-serif"
+               fontWeight="Bolder"
+               fontSize="80px"
+               color="#17252A"
+               letterSpacing={4}
+             >
+               Tania.
+             </Typography>
+             <Typography
+               fontFamily="'Manrope', sans-serif"
+               fontWeight="Bolder"
+               fontSize="40px"
+               color="#9897A9"
+             >
+               <Typewriter
+                 onInit={(typewriter) => {
+                   typewriter
+                     .typeString("Software Engineer")
+                     .pauseFor(100)
+                     .deleteAll()
+                     .typeString("Product Manager")
+                     .start();
+                 }}
+               />
+             </Typography>
+             <br />
+             <Typography
+               fontFamily="'Sono', sans-serif"
+               fontWeight="light"
+               fontSize="15px"
+             >
+               working in Fintech industry specialised in&nbsp;
+               <span
+                 style={{
+                   color: "white",
+                   fontWeight: "light",
+                   fontSize: "15px",
+                 }}
+               >
+                 onboarding and user experience.
+               </span>
+             </Typography>
+             <br />
+             <Button
+               variant="outlined"
+               color="inherit"
+               onClick={() => {
+                 window.location.href = "mailto:taniaa2707@gmail.com";
+               }}
+             >
+               Email Me
+             </Button>
+           </Box>
+            ) : (
             <Box mt="200px" color="white">
               <Typography
                 fontFamily="'Sono', sans-serif"
@@ -126,11 +295,78 @@ export default function App() {
                 Email Me
               </Button>
             </Box>
+            )}
           </Grid>
         </Grid>
+
+        <div>
+        {isMobile ? (
+           <Grid id="AboutMe" container maxWidth="lg" mt="250px">
+           <Grid item xs={12} md={6} lg={6}>
+             <Box mt="0px" color="white">
+               <Typography
+                 className="About Me"
+                 fontFamily="'Manrope', sans-serif"
+                 fontWeight="Bolder"
+                 fontSize="40px"
+                 color="#9897A9"
+               >
+                 About Me
+               </Typography>
+ 
+               <Typography
+                 fontFamily="'Sono', sans-serif"
+                 fontWeight="light"
+                 fontSize="15px"
+               >
+                 Hello there! My name is Tania and I have passion in building a
+                 product. I’ve had the privilege of working in&nbsp;
+                 <span>
+                   <a
+                     style={{ textDecoration: "none", color: "#17252A " }}
+                     href="https://www.spenmo.com"
+                     target="_blank"
+                   >
+                     Spenmo&nbsp;
+                   </a>
+                 </span>
+                 and{" "}
+                 <span>
+                   <a
+                     style={{ textDecoration: "none", color: "#17252A " }}
+                     href="https://www.ibm.com/my-en"
+                     target="_blank"
+                   >
+                     IBM.&nbsp;
+                   </a>
+                 </span>
+                 Recently found a new interest in coding, reason why I built this
+                 website.
+                 <br />
+                 <br />
+                 Work aside, if you are into games, music, manga and anime, hit
+                 me up. We'll be best buddies!
+               </Typography>
+             </Box>
+           </Grid>
+           <Grid item xs={12} md={6} lg={6}>
+             <img
+               src={"profilepicture.png"}
+               alt="Profile Picture"
+               style={{
+                 marginTop: "50px",
+                 height: "70%",
+                 width: "60%",
+                 objectFit: "cover",
+               }}
+             />
+           </Grid>
+         </Grid>
+          ) : (
         <Grid id="AboutMe" container maxWidth="lg" mt="300px">
           <Grid item xs={12} md={6} lg={6}>
             <Box mt="0px" color="white">
+            
               <Typography
                 className="About Me"
                 fontFamily="'Manrope', sans-serif"
@@ -189,6 +425,8 @@ export default function App() {
             />
           </Grid>
         </Grid>
+        )}
+        </div>
         <Box height="300px"></Box>
       </Container>
     </div>
