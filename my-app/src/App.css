@@ -1,51 +1,51 @@
 .App {
   font-family: "Manrope", sans-serif;
-  background-color: #2f686f;
+  background-color: #2B3A55;
   height: 100%;
   width: 100%;
 }
 
 .navbar-about {
   text-decoration: none;
-  color: white;
+  color: #F2E5E5;
 }
 
 .navbar-about:hover {
-  color: #17252a;
+  color: #CE7777;
 }
 
 .navbar-medium {
   text-decoration: none;
-  color: white;
+  color: #F2E5E5;
 }
 
 .navbar-medium:hover {
-  color: #17252a;
+  color: #CE7777;
 }
 
 .navbar-linkedin {
   text-decoration: none;
-  color: white;
+  color: #F2E5E5;
 }
 
 .navbar-linkedin:hover {
-  color: #17252a;
+  color: #CE7777;
 }
 
 .navbar-github {
   text-decoration: none;
-  color: white;
+  color: #F2E5E5;
 }
 
 .navbar-github:hover {
-  color: #17252a;
+  color: #CE7777;
 }
 
 .navbar-resume {
   text-decoration: none;
-  color: white;
+  color: #F2E5E5;
 }
 
 .navbar-resume:hover {
-  color: #17252a;
+  color: #CE7777;
 }
